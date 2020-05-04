@@ -65,7 +65,7 @@ $(document).on("click", ".btnRemove", function(event) {
 	$.ajax({
 		url : "AppoAPI",
 		type : "DELETE",
-		data : "Appointment_Id=" + $(this).data("appoid"),
+		data : "appoId=" + $(this).data("appoid"),
 		dataType : "text",
 		complete : function(response, status) {
 			onItemDeleteComplete(response.responseText, status);

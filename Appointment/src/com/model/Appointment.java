@@ -181,13 +181,12 @@ public class Appointment {
 
 				output += "<td><input name='btnUpdate' type='button' value='Update' class='btnUpdate btn btn-warning'></td>"
 
-						+ "<td><form method='post' action='appointments.jsp'>"
+						+ "<td>"
 
-						+ "<input name='btnRemove' type='submit' value='Remove' class='btn btn-danger'>"
+						+ "<input name='btnRemove' type='button' value='Remove' class='btnRemove btn btn-danger' data-appoid='"
+						+ appoId + "'>"
 
-						+ "<input name='hidAppoIdDelete' type='hidden' data-appoid='" + appoId + "'>"
-
-						+ "</form></td></tr><tbody>";
+						+ "</td></tr><tbody>";
 			}
 
 			connection.close();
@@ -293,10 +292,10 @@ public class Appointment {
 			preparedStmt.execute();
 
 			connection.close();
-			
+
 			String newAppo = readAppointments();
 			output = "{\"status\":\"success\", \"data\": \"" + newAppo + "\"}";
-			
+
 		} catch (Exception e) {
 
 			output = "{\"status\":\"error\", \"data\":         \"Error while deleting the appointment.\"}";

@@ -44,7 +44,11 @@ public class AppoAPI extends HttpServlet {
     
     protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
+    	Map paras = getParasMap(request); 
+		 
+		 String output = appointment.calcelAppointment(paras.get("appoId").toString()); 
+		 
+		 response.getWriter().write(output);
 	}
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
