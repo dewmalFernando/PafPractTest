@@ -18,9 +18,28 @@
 </head>
 <body>
 
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="availableDocs.jsp">Available Doctors</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="appointments.jsp">Appointments</a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+
 <h1>Available Doctors</h1>
 
-<div class="container-fluid">
+
 	<%
 		Appointment appointment = new Appointment();
 		out.print(appointment.getAvailableDocs());

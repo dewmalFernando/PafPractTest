@@ -165,7 +165,7 @@ public class Appointment {
 				String date = resultSet.getString("Date");
 
 				// Add into the html table
-				output += "<tbody><tr><td><input id='hidReadAppoIdUpdate'name='hidReadAppoIdUpdate'type='hidden' value=''"
+				output += "<tbody><tr><td><input id='hidReadAppoIdUpdate'name='hidReadAppoIdUpdate'type='hidden' value='"
 
 						+ appoId + "'>" + userId + "</td>";
 
